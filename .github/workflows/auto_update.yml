@@ -2,8 +2,11 @@ name: Auto Update README
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天北京时间早上 8 点自动运行
-  workflow_dispatch: # 也可以手动触发
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write  # 显式声明需要写入权限
 
 jobs:
   build:
@@ -14,10 +17,10 @@ jobs:
 
       - name: Update README
         run: |
-          echo -e "\n" >> README.md
+          # 检查最后一行是否已经是注释，如果是则替换，防止文件无限变大
+          sed -i '/" >> README.md
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
           git commit -m "Update last check date"
           git push
-          
