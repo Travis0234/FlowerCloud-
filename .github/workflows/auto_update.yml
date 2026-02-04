@@ -2,11 +2,11 @@ name: Auto Update README
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    - cron: '0 0 * * *' # 每天北京时间早上 8 点
+  workflow_dispatch:      # 允许手动运行测试
 
 permissions:
-  contents: write  # 显式声明需要写入权限
+  contents: write         # 必须显式声明写入权限
 
 jobs:
   build:
@@ -14,13 +14,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true # 使用默认的 GITHUB_TOKEN
 
       - name: Update README
         run: |
-          # 检查最后一行是否已经是注释，如果是则替换，防止文件无限变大
+          # 1. 配置 Git 身份
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 2. 修改文件 (删除旧的时间戳并添加新的)
           sed -i '/" >> README.md
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          
+          # 3. 提交并推送
           git add README.md
-          git commit -m "Update last check date"
-          git push
+          # 只有在有变动时才 commit，防止没变动时报错
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update last check date" && git push)
