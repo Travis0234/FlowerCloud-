@@ -28,7 +28,7 @@
 ### 📊 性能实测与分析
 
 #### 1. 晚高峰测速表现
-![测速实测](./image/speedtest.png)
+![测速实测](https://www.duyaoss.com/uploaded/20260214_698f6231bcef1.jpg)
 
 #### 2. 流媒体解锁报告
 保障 **Disney Plus、Netflix、HBO Max、巴哈姆特动画疯** 等主流平台解锁，几乎实现全流媒体通杀。
