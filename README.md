@@ -1,6 +1,11 @@
 # 🌐 FlowerCloud 花云 - 顶级IEPL专线机场
 
-**[👉 点击此处：前往 FlowerCloud 官方注册地址](https://api-flowercloud.com/aff.php?aff=16382)**
+**[👉 点击此处：前往🌸 FlowerCloud 官方注册地址](https://api-flowercloud.com/aff.php?aff=16382)**
+
+**[👉 点击此处：前往🌸 FlowerCloud 官方注册地址](https://api-flowercloud.com/aff.php?aff=16382)**
+
+**[🎉 我的个人博客：科学上网技术分享](https://travisblog.qzz.io/)**
+
 
 ### 📖 品牌介绍
 * **官方名称：** FlowerCloud (花云)
