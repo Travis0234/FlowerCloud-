@@ -41,7 +41,7 @@
 ### 📊 性能实测与分析
 
 #### 1. 晚高峰测速表现
-![测速实测](./image/nxspeedtest.jpg)
+![测速实测](./image/nxspeedtest.png)
 
 #### 2. 流媒体解锁报告
 保障 **Disney Plus、Netflix、HBO Max、Bahamut** 等**几乎所有主流媒体平台解锁**，几乎实现全流媒体通杀。
