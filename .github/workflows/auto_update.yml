@@ -2,7 +2,7 @@ name: Auto Update README
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天北京时间早上 8 点
+    - cron: '0 0 * * *' # 每天北京时间早上 8 点更新
   workflow_dispatch:      # 允许手动运行测试
 
 permissions:
